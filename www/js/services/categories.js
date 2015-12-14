@@ -1,13 +1,11 @@
 angular.module('cocoowa')
-  .factory("News",function NewsFactory($http){
+  .factory("Categories",function CategoriesFactory($http){
     return{
-
-      getLatest: function(){
+      get: function(){
         return $http({
-
           method:'GET',
           timeout: 10000,
-          url: 'https://0ikanmdrx1.execute-api.eu-west-1.amazonaws.com/production/getnews',
+          url: 'https://0ikanmdrx1.execute-api.eu-west-1.amazonaws.com/production/getcategories',
           headers: {
             'Content-Type': 'application/json; charset=utf-8'
           }

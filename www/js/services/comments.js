@@ -1,5 +1,5 @@
 angular.module('cocoowa')
-  .factory("Comments",function NewsletterFactory($http){
+  .factory("Comments",function CommentsFactory($http){
     return{
 
       send: function(data){

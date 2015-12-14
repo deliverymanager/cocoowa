@@ -1,5 +1,5 @@
 angular.module('cocoowa')
-  .factory("Offers",function NewsletterFactory($http){
+  .factory("Offers",function OffersFactory($http){
     return{
       getLatest: function(){
         return $http({

@@ -1,10 +1,10 @@
 angular.module('cocoowa')
-  .controller('MenuController', function ($rootScope, $scope, $http, _, $ionicPlatform, $ionicPopup, $timeout) {
+  .controller('MenuController', function ($rootScope, $scope, $http, _, $ionicPlatform, $ionicPopup, $timeout, Languages) {
 
     console.log("MenuController loaded!");
 
     $ionicPlatform.ready(function () {
-      $http.get('data/languages.json')
+      Languages.get()
         .success(function (response) {
 
           console.log("Success in getting languages.json!");
