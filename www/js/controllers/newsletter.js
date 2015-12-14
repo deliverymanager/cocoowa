@@ -3,4 +3,5 @@ angular.module('cocoowa').controller('NewsletterController',function(Newsletter,
   //Checking for subscription
   Newsletter.checkSubscription()
 
+
 });
