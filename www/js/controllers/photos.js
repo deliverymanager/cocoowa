@@ -7,7 +7,7 @@ angular.module('cocoowa')
       direction: 'horizontal',
       loop: true,
       effect: 'fade',
-      autoplay: 3000
+      autoplay: 4000
     });
 
   });
