@@ -110,6 +110,26 @@ angular.module('cocoowa', ['ionic'])
             controller: 'OffersController'
           }
         }
+      })
+
+      .state('app.categories', {
+        url: '/categories',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/pages/categories/categories.html',
+            controller: 'CategoriesController'
+          }
+        }
+      })
+
+      .state('app.products', {
+        url: '/products',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/pages/products/products.html',
+            controller: 'ProductsController'
+          }
+        }
       });
 
     // if none of the above states are matched, use this as the fallback
