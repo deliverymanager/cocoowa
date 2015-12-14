@@ -8,32 +8,13 @@
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
 
-    <!--WEBSITE-->
-    <div class="card animated fadeInLeft">
+    <div class="card animated fadeInLeft" ng-repeat="presentation in currentLanguage.pages.presentation">
       <div class="item item-divider" style="text-align: center;">
-        {{currentLanguage.pages.presentation.title1}}
+        {{presentation.title}}
       </div>
       <div class="item item-text-wrap">
-        {{currentLanguage.pages.presentation.text1}}
+        {{presentation.text}}
       </div>
-    </div>
-
-    <div class="card animated fadeInRight">
-      <!--ETYMOLOGY-->
-      <div class="item item-divider" style="text-align: center;">
-        {{currentLanguage.pages.presentation.title2}}
-      </div>
-      <div class="item item-text-wrap">
-        {{currentLanguage.pages.presentation.text2}}
-      </div>
-    </div>
-
-    <!--CHOCOLATE LAB-->
-    <div class="item item-divider" style="text-align: center;">
-      {{currentLanguage.pages.presentation.title3}}
-    </div>
-    <div class="item item-text-wrap">
-      {{currentLanguage.pages.presentation.text3}}
     </div>
 
   </ion-content>
