@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<ion-view class="background-image">
-  <ion-nav-bar class="bar-stable">
+<ion-view class="background-image" title="{{currentLanguage.menu[3]}}">
+  <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-buttons side="left">
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
-  <ion-content has-bouncing="false" class="has-header">
+  <ion-content has-bouncing="false" class="has-header" scroll="false">
 
     <div style="height: 100%; width: 100%;" class="flex-container">
-      <div class="flex-item card">
+      <div class="flex-item card" style="width: 100%;">
         <!--message-->
-        <div class="item item-text-wrap padding">
+        <div class="item item-divider padding">
           {{currentLanguage.pages.newsletter.message}}
         </div>
         <!--email input-->
         <label class="item item-input padding">
-          <input type="text" placeholder="email">
+          <input type="email" placeholder="email" ng-model="data.email">
         </label>
         <!--submit button-->
         <div style="text-align: center;" class="padding">
-          <button class="button button-positive" ng-click="subscribe()">
+          <button class="button button-positive button-block icon ion-email" ng-click="registerForNewsletter()">
             {{currentLanguage.pages.newsletter.buttonMessage}}
           </button>
         </div>

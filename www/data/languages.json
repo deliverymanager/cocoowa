@@ -36,7 +36,7 @@
         }
       ],
       "newsletter": {
-        "message": "Please fill in your email for receiving newsletter",
+        "message": "Please fill in your email",
         "buttonMessage": "Subscribe"
       },
       "comments": {

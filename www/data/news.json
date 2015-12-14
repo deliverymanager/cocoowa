@@ -1,0 +1,19 @@
+{
+  "newsArray":[
+    {
+      "title":"aaaaaa",
+      "imageUrl":"",
+      "text":"aaaaaaa"
+    },
+    {
+      "title":"bbbbbb",
+      "imageUrl":"",
+      "text":"aabbbbaaaaa"
+    },
+    {
+      "title":"cccccc",
+      "imageUrl":"",
+      "text":"aaaacccccaaa"
+    }
+  ]
+}

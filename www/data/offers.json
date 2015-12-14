@@ -1,0 +1,21 @@
+{
+  "offersArray":[
+    {
+      "title":"aaaaaa",
+      "imageUrl":"",
+      "text":"aaaaaaa",
+      "price":"1"
+    },
+    {
+      "title":"bbbbbb",
+      "imageUrl":"",
+      "text":"aabbbbaaaaa",
+      "price":"2"
+    },
+    {
+      "title":"cccccc",
+      "imageUrl":"",
+      "text":"aaaacccccaaa",
+      "price":"3"
+    }
+}

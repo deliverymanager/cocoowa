@@ -9,7 +9,7 @@
   <ion-content has-bouncing="false" class="has-header">
 
     <!--In case there are no articles-->
-    <div style="text-align: center;" ng-if="newsArray.length < 1" >
+    <div style="text-align: center;" ng-if="newsArray.length < 1">
       <h4 class="padding" style="color: lightgrey;">
         Δεν υπάρχουν νέα για προβολή
       </h4>
@@ -24,7 +24,7 @@
       <!--Body-->
       <div class="item item-body">
         <!--Image-->
-        <img ng-if="article.image !== ''">
+        <img ng-if="article.imageUrl !== ''" ng-src="{{article.imageUrl}}">
         <!--Text-->
         <p>
           {{article.text}}

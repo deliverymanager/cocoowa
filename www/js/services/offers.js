@@ -1,13 +1,11 @@
 angular.module('cocoowa')
   .factory("Offers",function NewsletterFactory($http){
     return{
-      getLatest: function(data){
-        console.log("Parameters for getting latest offers POST",data);
+      getLatest: function(){
         return $http({
-          method:'POST',
+          method:'GET',
           timeout: 10000,
-          url: '',
-          data: JSON.stringify(data),
+          url: 'https://0ikanmdrx1.execute-api.eu-west-1.amazonaws.com/production/getoffers',
           headers: {
             'Content-Type': 'application/json; charset=utf-8'
           }

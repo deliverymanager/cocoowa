@@ -5,9 +5,10 @@ angular.module("cocoowa").controller("NewsController",function(News,$rootScope,$
   //Initializing newsArray
   $scope.newsArray = [];
 
-  News.getLatest($rootScope.currentLanguage.language)
+  News.getLatest()
     .success(function(res){
-      $scope.newsArray = res;
+      $scope.newsArray = res.newsArray;
+      console.log("newsArray: ",$scope.newsArray);
     })
     .error(function(err){
       console.log("Error on fetching the news: ",err);

@@ -4,10 +4,10 @@ angular.module("cocoowa").controller("OffersController",function($scope,Offers,$
 
   $scope.offersArray = [];
 
-  Offers.getLatest($rootScope.currentLanguage.language)
+  Offers.getLatest()
     .success(function(res){
       console.log("");
-      $scope.offersArray = res;
+      $scope.offersArray = res.offersArray;
     })
     .error(function(err){
       console.log("Error on fetching offersArray: ",err);

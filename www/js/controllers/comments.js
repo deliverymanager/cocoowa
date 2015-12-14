@@ -1,4 +1,6 @@
-angular.module('cocoowa').controller('CommentsController', function ($scope, Comments) {
+angular.module('cocoowa').controller('CommentsController', function ($scope, Comments, Toast) {
+
+  console.log("CommentsController loaded!");
 
   //Initializing the comments  parameters object
   $scope.commentsObject = {
@@ -11,15 +13,15 @@ angular.module('cocoowa').controller('CommentsController', function ($scope, Com
 
   $scope.sendComment = function(){
 
-    if(commentsObject.name === ''){
+    if($scope.commentsObject.name === ''){
       Toast.show("Παρακαλώ εισάγετε όνομα",'top');
-    }else if(commentsObject.email === ''){
+    }else if($scope.commentsObject.email === ''){
       Toast.show("Παρακαλώ εισάγετε email",'top');
-    }else if(commentsObject.comments === ''){
+    }else if($scope.commentsObject.comments === ''){
       Toast.show("Παρακαλώ γράψτε την γνώμη σας στα σχόλια",'top');
     }else{
       //POST request
-      Comments.send(commentsObject);
+      Comments.send($scope.commentsObject);
     }
 
   };

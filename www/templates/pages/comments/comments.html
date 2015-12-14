@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<ion-view class="background-image">
-  <ion-nav-bar class="bar-stable">
+<ion-view class="background-image" title="{{currentLanguage.menu[4]}}">
+  <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-buttons side="left">
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
       </button>
@@ -25,7 +25,7 @@
         </label>
         <!--Submit button-->
         <div style="text-align: center;" class="item item-divier padding">
-          <button class="button button-positive" ng-click="sendComment()">
+          <button class="button button-positive button-block icon ion-paper-airplane" ng-click="sendComment()">
             {{currentLanguage.pages.comments.buttonMessage}}
           </button>
         </div>
