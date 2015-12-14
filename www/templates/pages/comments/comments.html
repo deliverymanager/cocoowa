@@ -13,19 +13,19 @@
         <!--FORM-->
         <label class="item item-input item-stacked-label">
           <span class="input-label">{{currentLanguage.pages.comments.name}}</span>
-          <input type="text" placeholder="{{currentLanguage.pages.comments.name}}">
+          <input type="text" placeholder="{{currentLanguage.pages.comments.name}}" ng-model="commentsObject.name">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">{{currentLanguage.pages.comments.email}}</span>
-          <input type="text" placeholder="email">
+          <input type="email" placeholder="email" ng-model="commentsObject.email">
         </label>
         <label class="item item-input item-stacked-label">
           <span class="input-label">{{currentLanguage.pages.comments.comments}}</span>
-          <textarea placeholder="..." style="width: 100%;"></textarea>
+          <textarea placeholder="..." style="width: 100%;" ng-model="commentsObject.comments"></textarea>
         </label>
         <!--Submit button-->
         <div style="text-align: center;" class="item item-divier padding">
-          <button class="button button-positive" ng-click="">
+          <button class="button button-positive" ng-click="sendComment()">
             {{currentLanguage.pages.comments.buttonMessage}}
           </button>
         </div>
