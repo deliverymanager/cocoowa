@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<ion-view>
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content has-bouncing="false" class="has-header">
+    <!--In case there are no articles-->
+    <div style="text-align: center;" ng-if="offersArray.length < 1" >
+      <h4 class="padding" style="color: lightgrey;">
+        Δεν υπάρχουν διαθέσιμες προσφορές
+      </h4>
+    </div>
+
+
+    <div class="list card" ng-repeat="offer in offersArray track by $index" ng-if="offersArray.length >= 1">
+      <!--Title-->
+      <div class="item item-divider">
+        {{offer.title}}
+      </div>
+      <!--Body-->
+      <div class="item item-body">
+        <!--Image-->
+        <img ng-if="offer.image !== ''">
+        <!--Text-->
+        <p>
+          {{offer.text}}
+        </p>
+
+      </div>
+      <!--Footer-->
+      <div>
+        {{offer.price | currency:"€"}}
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

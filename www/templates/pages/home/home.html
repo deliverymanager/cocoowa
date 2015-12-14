@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<ion-view>
+  <ion-nav-bar class="bar-stable transparent">
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
+        MENU
+      </button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-clear" ng-click="changeLanguage()">
+        <img ng-src="img/flags/{{currentLanguage.language}}.png" style="width: 55%; height: 55%;">
+      </button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+  <ion-content scroll="false" style="height: 100%;">
+    <div class="swiper-container" style="position: absolute">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide slider-1">
+        </div>
+        <div class="swiper-slide slider-2">
+        </div>
+        <div class="swiper-slide slider-3">
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <!--<div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>-->
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div ng-if="currentLanguage" class="card semi-transparent home-card">
+      <button class="button button-positive button-block">{{currentLanguage.home.signButton}}</button>
+      <button class="button button-positive button-block">{{currentLanguage.home.catalogButton}}</button>
+    </div>
+  </ion-content>
+</ion-view>

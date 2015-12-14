@@ -1,0 +1,145 @@
+/*FLEXBOX*/
+.flex-container{
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  -webkit-align-items: center;
+  align-items: center;
+
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.flex-container-bottom{
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.flex-item{
+
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+
+  -webkit-align-self: auto;
+  align-self: auto;
+
+}
+
+/*TRANSPARENT*/
+.transparent{
+  opacity: 1 !important;
+  background-size: 0 !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.semi-transparent{
+  opacity: 1 !important;
+  background-size: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/*MAP*/
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.my-back-button {
+  content: url('');
+  width: 48px;
+}
+
+/*LANGUAGE FLAGS*/
+.languages-item {
+  margin-top: 5%;
+  padding: 2%;
+  border: none;
+}
+
+.languages-item img {
+  height: 50%;
+  width: 50%;
+}
+
+.selected-flag{
+  background-color: dodgerblue;
+}
+
+
+/*SWIPER*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-1{
+  background: url('../img/slider/slider1.png') no-repeat center center; /*relative url*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.slider-2{
+  background: url('../img/slider/slider2.png') no-repeat center center; /*relative url*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.slider-3{
+  background: url('../img/slider/slider3.png') no-repeat center center; /*relative url*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+
+
+/*BACKGROUND*/
+.background-image{
+  background: url('../img/backgrounds/background1.png') no-repeat center center; /*relative url*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.home-card{
+  text-align: center;
+  width: 100%; padding:20px;
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+
+

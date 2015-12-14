@@ -1,0 +1,9 @@
+<ion-list ng-repeat="item in languages">
+  <ion-item class="row row-center languages-item flex-container" ng-click="popupVariablesObject.selectedLanguage = item.language"
+            ng-class="{'selected-flag':(popupVariablesObject.selectedLanguage === item.language)}">
+
+    <img ng-src="img/flags/big/{{item.language}}.png"
+         class="flex-item">
+
+  </ion-item>
+</ion-list>

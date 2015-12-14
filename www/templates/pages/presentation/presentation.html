@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<ion-view>
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content has-bouncing="false" class="has-header">
+
+    <!--WEBSITE-->
+    <div class="card animated fadeInLeft">
+      <div class="item item-divider" style="text-align: center;">
+        {{currentLanguage.pages.presentation.title1}}
+      </div>
+      <div class="item item-text-wrap">
+        {{currentLanguage.pages.presentation.text1}}
+      </div>
+    </div>
+
+    <div class="card animated fadeInRight">
+      <!--ETYMOLOGY-->
+      <div class="item item-divider" style="text-align: center;">
+        {{currentLanguage.pages.presentation.title2}}
+      </div>
+      <div class="item item-text-wrap">
+        {{currentLanguage.pages.presentation.text2}}
+      </div>
+    </div>
+
+    <!--CHOCOLATE LAB-->
+    <div class="item item-divider" style="text-align: center;">
+      {{currentLanguage.pages.presentation.title3}}
+    </div>
+    <div class="item item-text-wrap">
+      {{currentLanguage.pages.presentation.text3}}
+    </div>
+
+  </ion-content>
+</ion-view>

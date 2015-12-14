@@ -1,0 +1,48 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <!--<ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>-->
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">MENU</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/home" class="animated fadeInLeft">
+          {{currentLanguage.menu[7]}}
+        </ion-item>
+        <ion-item menu-close href="#/app/presentation" class="animated fadeInLeft">
+          {{currentLanguage.menu[0]}}
+        </ion-item>
+        <ion-item menu-close href="#/app/photos" class="animated fadeInLeft">
+          {{currentLanguage.menu[1]}}
+        </ion-item>
+        <ion-item menu-close href="#/app/map" class="animated fadeInLeft">
+          {{currentLanguage.menu[2]}}
+        </ion-item>
+        <ion-item menu-close href="#/app/newsletter" class="animated fadeInLeft">
+          {{currentLanguage.menu[3]}}
+        </ion-item>
+        <ion-item menu-close href="#/app/comments" class="animated fadeInLeft">
+          {{currentLanguage.menu[4]}}
+        </ion-item>
+        <ion-item menu-close href="#/app/news" class="animated fadeInLeft">
+          {{currentLanguage.menu[5]}}
+        </ion-item>
+        <ion-item menu-close href="#/app/offers" class="animated fadeInLeft">
+          {{currentLanguage.menu[6]}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
