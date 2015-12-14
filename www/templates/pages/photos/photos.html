@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <ion-view>
-  <ion-nav-bar class="bar-stable">
+  <ion-nav-bar class="bar-stable transparent">
     <ion-nav-buttons side="left">
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
-  <ion-content has-bouncing="false" class="has-header">
+  <!--<ion-content has-bouncing="false" class="has-header">-->
 
-    <div class="photos-container">
+    <div class="swiper-container" onload="initSwiper()">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -27,5 +27,5 @@
       <div class="swiper-scrollbar"></div>
     </div>
 
-  </ion-content>
+  <!--</ion-content>-->
 </ion-view>

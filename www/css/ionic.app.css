@@ -9852,6 +9852,18 @@ a.button {
   -moz-background-size: cover;
   background-size: cover; }
 
+#logo {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  margin: 0 auto; }
+
+.logo-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2; }
+
 .home-card {
   text-align: center;
   width: 100%;
@@ -9859,7 +9871,8 @@ a.button {
   position: absolute;
   z-index: 2;
   margin: 0;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  bottom: 0; }
 
 .background {
   -webkit-background-size: cover;
