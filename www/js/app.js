@@ -126,7 +126,7 @@ angular.module('cocoowa', ['ionic'])
         url: '/products',
         views: {
           'menuContent': {
-            templateUrl: 'templates/pages/products/products.html',
+            templateUrl: 'templates/pages/categories/products.html',
             controller: 'ProductsController'
           }
         }

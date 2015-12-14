@@ -4,7 +4,7 @@ angular.module('cocoowa')
     console.log('HomeController loaded!');
 
     /*SWIPER*/
-    var mySwiper = new Swiper ('.swiper-container', {
+    var homeSwiper = new Swiper ('.swiper-container', {
       // Optional parameters
       direction: 'horizontal',
       loop: true,
