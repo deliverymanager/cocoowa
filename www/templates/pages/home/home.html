@@ -15,32 +15,42 @@
     </ion-nav-buttons>
 
   </ion-nav-bar>
-  <ion-content scroll="false" style="height: 100%;">
-    <div class="swiper-container" style="position: absolute">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide background" id="slider-1">
-        </div>
-        <div class="swiper-slide background" id="slider-2">
-        </div>
-        <div class="swiper-slide background" id="slider-3">
-        </div>
+
+  <!--LOGO-->
+  <div class="logo-container flex-container">
+      <img ng-src="../../../img/logo/logo.png" class="flex-item" style="height: 200px; width: 200px;">
+  </div>
+
+
+  <!--<ion-content scroll="false" style="height: 100%;">-->
+  <div class="swiper-container" style="position: absolute" onload="initSwiper()">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" id="slider-1">
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <!--<div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>-->
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+      <div class="swiper-slide" id="slider-2">
+      </div>
+      <div class="swiper-slide" id="slider-3">
+      </div>
     </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 
-    <div ng-if="currentLanguage" class="card semi-transparent home-card">
-      <button class="button button-positive button-block">{{currentLanguage.pages.home.signButton}}</button>
-      <button class="button button-positive button-block">{{currentLanguage.pages.home.catalogButton}}</button>
-    </div>
-  </ion-content>
+    <!-- If we need navigation buttons -->
+    <!--<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+  <div ng-if="currentLanguage" class="card semi-transparent home-card">
+    <button class="button button-positive button-block icon-left ion-person">{{currentLanguage.pages.home.signButton}}
+    </button>
+    <button class="button button-positive button-block icon-left ion-ios-pricetags">
+      {{currentLanguage.pages.home.catalogButton}}
+    </button>
+  </div>
+  <!--</ion-content>-->
 </ion-view>

@@ -3,13 +3,15 @@ angular.module('cocoowa')
 
     console.log('HomeController loaded!');
 
-    /*SWIPER*/
-    var homeSwiper = new Swiper ('.swiper-container', {
-      // Optional parameters
-      direction: 'horizontal',
-      loop: true,
-      effect: 'fade',
-      autoplay: 3000
-    });
+    $scope.initSwiper = function(){
+      /*SWIPER*/
+      var homeSwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect: 'fade',
+        autoplay: 3000
+      });
+    }
 
 });

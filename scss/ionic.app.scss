@@ -161,6 +161,19 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   @include setBackgroundImage('../img/gallery/gallery3.png');
 }
 
+#logo{
+  position: absolute;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+}
+.logo-container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
 .home-card {
   text-align: center;
   width: 100%;
@@ -169,6 +182,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
   z-index: 2;
   margin: 0;
   vertical-align: baseline;
+  bottom: 0;
 }
 
 .background {

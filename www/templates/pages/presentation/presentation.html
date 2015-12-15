@@ -8,7 +8,9 @@
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
 
-    <div class="card animated fadeInLeft" ng-repeat="presentation in currentLanguage.pages.presentation">
+    <div class="card animated"
+         ng-repeat="presentation in currentLanguage.pages.presentation track by $index"
+         ng-class="{'fadeInLeft':$odd, 'fadeInRight':$even}">
       <div class="item item-divider" style="text-align: center;">
         {{presentation.title}}
       </div>
