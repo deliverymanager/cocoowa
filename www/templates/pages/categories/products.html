@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <ion-view>
   <ion-nav-bar class="bar-stable bar-positive">
-    <ion-nav-back-button class="button button-clear button-icon icon ion-arrow-left-a">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-chevron-left"></i>
     </ion-nav-back-button>
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
 
-    <ion-list>
-      <ion-item ng-repeat="product in productsArray track by product.id">
-        <div>
-          {{product.name}}
-        </div>
-        <div>
-          {{product.price}}
-        </div>
-      </ion-item>
-    </ion-list>
+    <div class="card" ng-repeat="product in productsArray track by product.id">
+      <div class="item item-divider">
+        {{product.name}}
+        {{product.price}}
+      </div>
+      <div>
+        <img ng-src="{{product.image}}">
+      </div>
+      <div class="item item-text-wrap">
+        {{product.description}}
+      </div>
+    </div>
 
   </ion-content>
 </ion-view>

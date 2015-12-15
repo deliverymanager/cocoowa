@@ -7,13 +7,16 @@
     </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
-
     <ion-list>
-      <ion-item ng-repeat="category in categoriesArray track by category.category_id" ng-click="loadProducts(category.category_id)">
+
+      <ion-item ng-repeat="category in categoriesArray track by category.category_id"
+                ng-click="loadProducts(category.category_id)"
+                class="item-icon-right">
         {{category.name}} <br>
         <img ng-src="{{category.image}}">
+        <i class="icon ion-chevron-right"></i>
       </ion-item>
-    </ion-list>
 
+    </ion-list>
   </ion-content>
 </ion-view>
