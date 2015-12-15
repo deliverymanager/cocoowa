@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ion-view>
+<ion-view class="background-image" title="{{currentLanguage.newsletter.pageTitle}}">
   <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-buttons side="left">
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
@@ -9,7 +9,7 @@
   <ion-content has-bouncing="false" class="has-header">
 
     <div class="card animated"
-         ng-repeat="presentation in currentLanguage.pages.presentation track by $index"
+         ng-repeat="presentation in currentLanguage.pages.presentation.data track by $index"
          ng-class="{'fadeInLeft':$odd, 'fadeInRight':$even}">
       <div class="item item-divider" style="text-align: center;">
         {{presentation.title}}
