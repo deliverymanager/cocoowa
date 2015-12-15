@@ -18,12 +18,11 @@
 
   <!--LOGO-->
   <div class="logo-container flex-container">
-      <img ng-src="../../../img/logo/logo.png" class="flex-item" style="height: 200px; width: 200px;">
+    <img ng-src="../../../img/logo/logo.png" class="flex-item" style="height: 200px; width: 200px;">
   </div>
 
-
   <!--<ion-content scroll="false" style="height: 100%;">-->
-  <div class="swiper-container" style="position: absolute" onload="initSwiper()">
+  <div class="swiper-container" style="position: absolute">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
@@ -45,7 +44,7 @@
     <div class="swiper-scrollbar"></div>
   </div>
 
-  <div ng-if="currentLanguage" class="card semi-transparent home-card">
+  <div ng-if="currentLanguage" class="card semi-transparent home-card animated fadeInUp">
     <!--<button class="button button-positive button-block icon-left ion-person">{{currentLanguage.pages.home.signButton}}
     </button>-->
     <button class="button button-positive button-block icon-left ion-ios-pricetags">
