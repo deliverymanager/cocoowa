@@ -1,3 +1,85 @@
 {
-
+  "success": true,
+  "data": [
+    {
+      "category_id": "1",
+      "parent_id": "0",
+      "name": "Greek Herbs Collection",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    },
+    {
+      "category_id": "2",
+      "parent_id": "0",
+      "name": "Geography of Chocolate Collection",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    },
+    {
+      "category_id": "3",
+      "parent_id": "0",
+      "name": "Flavours of the World Collection",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    },
+    {
+      "category_id": "4",
+      "parent_id": "0",
+      "name": "Cocooart Collection",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    },
+    {
+      "category_id": "5",
+      "parent_id": "0",
+      "name": "Wine Collection",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    },
+    {
+      "category_id": "6",
+      "parent_id": "0",
+      "name": "Kids Collection",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    },
+    {
+      "category_id": "7",
+      "parent_id": "0",
+      "name": "Hotel Collection",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    },
+    {
+      "category_id": "8",
+      "parent_id": "0",
+      "name": "Cocoowa Cup",
+      "image": null,
+      "filters": {
+        "filter_groups": []
+      },
+      "categories": null
+    }
+  ]
 }

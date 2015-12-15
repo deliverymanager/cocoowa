@@ -8,7 +8,12 @@
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
 
-    categories
+    <ion-list>
+      <ion-item ng-repeat="category in categoriesArray track by category.category_id" ng-click="loadProducts(category.category_id)">
+        {{category.name}} <br>
+        <img ng-src="{{category.image}}">
+      </ion-item>
+    </ion-list>
 
   </ion-content>
 </ion-view>
