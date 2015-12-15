@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ion-view class="background-image" title="{{currentLanguage.newsletter.pageTitle}}">
+<ion-view class="background-image" title="{{currentLanguage.pages.presentation.pageTitle}}">
   <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-buttons side="left">
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
@@ -14,8 +14,7 @@
       <div class="item item-divider" style="text-align: center;">
         {{presentation.title}}
       </div>
-      <div class="item item-text-wrap">
-        {{presentation.text}}
+      <div class="item item-text-wrap" ng-bind-html="presentation.text">
       </div>
     </div>
 

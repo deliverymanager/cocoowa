@@ -14,7 +14,7 @@ angular.module('cocoowa')
 
           /*Setting the current language*/
           $timeout(function () {
-            $rootScope.currentLanguage = _.findWhere($scope.languages, {"language": "english"});
+            $rootScope.currentLanguage = _.findWhere($scope.languages, {"language": "greek"});
             console.log($rootScope.currentLanguage);
           });
         })
