@@ -34,6 +34,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.home', {
         url: '/home',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/home/home.html',
@@ -44,6 +45,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.presentation', {
         url: '/presentation',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/presentation/presentation.html',
@@ -54,6 +56,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.photos', {
         url: '/photos',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/photos/photos.html',
@@ -64,6 +67,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.map', {
         url: '/map',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/map/map.html',
@@ -74,6 +78,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.newsletter', {
         url: '/newsletter',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/newsletter/newsletter.html',
@@ -84,6 +89,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.comments', {
         url: '/comments',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/comments/comments.html',
@@ -94,6 +100,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.news', {
         url: '/news',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/news/news.html',
@@ -104,6 +111,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.offers', {
         url: '/offers',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/offers/offers.html',
@@ -114,6 +122,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.categories', {
         url: '/categories',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/categories/categories.html',
@@ -124,6 +133,7 @@ angular.module('cocoowa', ['ionic'])
 
       .state('app.products', {
         url: '/products',
+        cache: false,
         views: {
           'menuContent': {
             templateUrl: 'templates/pages/categories/products.html',

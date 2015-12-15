@@ -5,6 +5,11 @@
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
       </button>
     </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <button class="button button-clear" ng-click="changeLanguage()">
+        <img ng-src="img/flags/{{currentLanguage.language}}.png" style="width: 55%; height: 55%;">
+      </button>
+    </ion-nav-buttons>
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
 

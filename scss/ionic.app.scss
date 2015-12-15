@@ -151,23 +151,26 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 /*GALLERY*/
 
-#gallery-1{
+#gallery-1 {
   @include setBackgroundImage('../img/gallery/gallery1.png');
 }
-#gallery-2{
+
+#gallery-2 {
   @include setBackgroundImage('../img/gallery/gallery2.png');
 }
-#gallery-3{
+
+#gallery-3 {
   @include setBackgroundImage('../img/gallery/gallery3.png');
 }
 
-#logo{
+#logo {
   position: absolute;
   z-index: 2;
   display: block;
   margin: 0 auto;
 }
-.logo-container{
+
+.logo-container {
   width: 100%;
   height: 100%;
   position: absolute;

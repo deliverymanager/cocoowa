@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <ion-view>
   <ion-nav-bar class="bar-stable transparent">
-
     <ion-nav-buttons side="left">
-      <button class="button button-icon button-clear button-light ion-navicon" menu-toggle="left">
-        MENU
+      <button class="button button-positive icon ion-navicon animated fadeInLeft" menu-toggle="left"> MENU
       </button>
     </ion-nav-buttons>
-
     <ion-nav-buttons side="right">
-      <button class="button button-clear" ng-click="changeLanguage()">
+      <button class="button button-clear animated fadeInRight" ng-click="changeLanguage()">
         <img ng-src="img/flags/{{currentLanguage.language}}.png" style="width: 55%; height: 55%;">
       </button>
     </ion-nav-buttons>
@@ -22,7 +19,7 @@
   </div>
 
   <!--<ion-content scroll="false" style="height: 100%;">-->
-  <div class="swiper-container" style="position: absolute">
+  <div id="homeSwiper" class="swiper-container" style="position: absolute">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->

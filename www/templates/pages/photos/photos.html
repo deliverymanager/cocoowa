@@ -2,30 +2,30 @@
 <ion-view>
   <ion-nav-bar class="bar-stable transparent">
     <ion-nav-buttons side="left">
-      <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      <button class="button button-positive icon ion-navicon" menu-toggle="left"> MENU
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
   <!--<ion-content has-bouncing="false" class="has-header">-->
 
-    <div class="swiper-container" onload="initSwiper()">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide" id="gallery-1"></div>
-        <div class="swiper-slide" id="gallery-2"></div>
-        <div class="swiper-slide" id="gallery-3"></div>
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <!--<div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>-->
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+  <div id="photosSwiper" class="swiper-container" style="position: absolute">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" id="gallery-1"></div>
+      <div class="swiper-slide" id="gallery-2"></div>
+      <div class="swiper-slide" id="gallery-3"></div>
     </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <!--<div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>-->
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
 
   <!--</ion-content>-->
 </ion-view>

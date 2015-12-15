@@ -1,5 +1,5 @@
 angular.module('cocoowa')
-  .controller('MenuController', function ($rootScope, $scope, $http, _, $ionicPlatform, $ionicPopup, $timeout, Languages) {
+  .controller('MenuController', function ($state, $rootScope, $scope, $http, _, $ionicPlatform, $ionicPopup, $timeout, Languages) {
 
     console.log("MenuController loaded!");
 
@@ -24,6 +24,7 @@ angular.module('cocoowa')
 
         });
     });
+
 
     /*Function for changing the language*/
     $scope.changeLanguage = function () {
