@@ -5,7 +5,7 @@ angular.module('cocoowa')
 
     $scope.$on('$ionicView.afterEnter', function () {
       console.log("Loading Swiper");
-      $scope.homeSwiper = new Swiper('.swiper-container', {
+      $rootScope.swiper = new Swiper(angular.element(document.querySelector("#homeSwiper")), {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -17,6 +17,6 @@ angular.module('cocoowa')
 
     $scope.$on('$ionicView.beforeLeave', function () {
       console.log("Destory");
-      $scope.homeSwiper.destroy();
+      $rootScope.swiper.destroy();
     });
   });

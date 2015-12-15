@@ -1,5 +1,5 @@
 angular.module('cocoowa')
-  .controller('PhotosController', function ($scope, $timeout) {
+  .controller('PhotosController', function ($scope, $timeout, $rootScope) {
 
     console.log("PhotosController loaded!");
 
@@ -8,7 +8,7 @@ angular.module('cocoowa')
 
     $scope.$on('$ionicView.afterEnter', function () {
       console.log("Loading Swiper");
-      $scope.photosSwiper = new Swiper('.swiper-container', {
+      $rootScope.swiper = new Swiper(angular.element(document.querySelector("#photosSwiper")), {
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -20,6 +20,6 @@ angular.module('cocoowa')
 
     $scope.$on('$ionicView.beforeLeave', function () {
       console.log("Destory");
-      $scope.photosSwiper.destroy();
+      $rootScope.swiper.destroy();
     });
   });
