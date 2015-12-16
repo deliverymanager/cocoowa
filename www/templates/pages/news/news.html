@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ion-view title="{{currentLanguage.pages.news.pageTitle}}">
+<ion-view title="{{currentLanguage.pages.news.pageTitle}}" nav-transition="none">
   <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-buttons side="left">
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
@@ -22,12 +22,11 @@
         {{article.title}}
       </div>
       <!--Body-->
-      <div class="item item-body">
+      <div class="item item-body" align="center">
         <!--Image-->
-        <img ng-if="article.imageUrl !== ''" ng-src="{{article.imageUrl}}">
+        <img style="max-height: 50%;" ng-if="article.imageUrl !== ''" ng-src="{{article.imageUrl}}">
         <!--Text-->
-        <p ng-bind-html="article.text">
-          {{article.text}}
+        <p ng-bind-html="article.text" style="text-align: left;">
         </p>
 
       </div>

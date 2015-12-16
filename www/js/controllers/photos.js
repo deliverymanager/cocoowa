@@ -1,10 +1,10 @@
 angular.module('cocoowa')
-  .controller('PhotosController', function ($scope, $timeout, $rootScope) {
+  .controller('PhotosController', function ($scope, $timeout, $rootScope, $ionicSideMenuDelegate) {
 
     console.log("PhotosController loaded!");
 
     /*SWIPER*/
-
+    $ionicSideMenuDelegate.canDragContent(false);
 
     $scope.$on('$ionicView.afterEnter', function () {
       console.log("Loading Swiper");
@@ -18,8 +18,4 @@ angular.module('cocoowa')
 
     });
 
-    $scope.$on('$ionicView.beforeLeave', function () {
-      console.log("Destory");
-      $rootScope.swiper.destroy();
-    });
   });

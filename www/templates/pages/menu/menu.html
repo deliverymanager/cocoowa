@@ -18,32 +18,32 @@
     </ion-header-bar>
     <ion-content has-bouncing="false">
       <ion-list>
-        <ion-item menu-close href="#/app/home" class="animated fadeInLeft">
+        <ion-item menu-close href="#/app/home">
           {{currentLanguage.pages.home.pageTitle}}
         </ion-item>
-        <ion-item menu-close href="#/app/presentation" class="animated fadeInLeft">
+        <ion-item menu-close href="#/app/presentation">
           {{currentLanguage.pages.presentation.pageTitle}}
         </ion-item>
-        <ion-item menu-close href="#/app/photos" class="animated fadeInLeft">
+        <ion-item menu-close ng-click="navigateTo('app.products')">
+          {{currentLanguage.pages.categories.pageTitle}}
+        </ion-item>
+        <ion-item menu-close href="#/app/photos">
           {{currentLanguage.pages.photos.pageTitle}}
         </ion-item>
-        <ion-item menu-close href="#/app/map" class="animated fadeInLeft">
+        <ion-item menu-close href="#/app/map">
           {{currentLanguage.pages.findUs.pageTitle}}
         </ion-item>
-        <ion-item menu-close href="#/app/newsletter" class="animated fadeInLeft">
+        <ion-item menu-close href="#/app/newsletter">
           {{currentLanguage.pages.newsletter.pageTitle}}
         </ion-item>
-        <ion-item menu-close href="#/app/comments" class="animated fadeInLeft">
+        <ion-item menu-close href="#/app/comments">
           {{currentLanguage.pages.comments.pageTitle}}
         </ion-item>
-        <ion-item menu-close href="#/app/news" class="animated fadeInLeft">
+        <ion-item menu-close href="#/app/news">
           {{currentLanguage.pages.news.pageTitle}}
         </ion-item>
-        <ion-item menu-close href="#/app/offers" class="animated fadeInLeft">
+        <ion-item menu-close href="#/app/offers">
           {{currentLanguage.pages.offers.pageTitle}}
-        </ion-item>
-        <ion-item menu-close href="#/app/products" class="animated fadeInLeft">
-          {{currentLanguage.pages.categories.pageTitle}}
         </ion-item>
       </ion-list>
     </ion-content>

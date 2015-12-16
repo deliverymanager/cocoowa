@@ -1,5 +1,5 @@
 angular.module('cocoowa')
-  .controller('HomeController', function ($timeout, $rootScope, $scope, $state, $ionicSideMenuDelegate) {
+  .controller('HomeController', function ($timeout, $rootScope, $scope, $state, $ionicSideMenuDelegate, $ionicHistory) {
 
     console.log('HomeController loaded!');
 
@@ -15,14 +15,13 @@ angular.module('cocoowa')
 
     });
 
-    $scope.$on('$ionicView.beforeLeave', function () {
-      console.log("Destory");
-      $rootScope.swiper.destroy();
-    });
-
     //Navigation to products
-    $rootScope.navigateTo = function(state){
+    $rootScope.navigateTo = function (state) {
       $ionicSideMenuDelegate.toggleLeft(false);
+      $ionicHistory.nextViewOptions({
+        disableAnimate: true,
+        disableBack: true
+      });
       $state.go(state);
     }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ion-view>
+<ion-view nav-transition="none">
   <ion-nav-bar class="bar-stable transparent">
     <ion-nav-buttons side="left">
       <button class="button button-dark icon ion-navicon animated fadeInLeft" menu-toggle="left">
@@ -44,7 +44,8 @@
   <div ng-if="currentLanguage" class="card semi-transparent home-card animated fadeInUp">
     <!--<button class="button button-positive button-block icon-left ion-person">{{currentLanguage.pages.home.signButton}}
     </button>-->
-    <button class="button button-positive button-block icon-left ion-ios-pricetags" ng-click="navigateTo('app.products')">
+    <button class="button button-positive button-block icon-left ion-ios-pricetags"
+            ng-click="navigateTo('app.products')">
       {{currentLanguage.pages.home.catalogButton}}
     </button>
   </div>

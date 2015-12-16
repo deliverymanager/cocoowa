@@ -1,5 +1,5 @@
 angular.module('cocoowa')
-  .controller('ProductsController', function ($scope, $rootScope, $state, $ionicSideMenuDelegate, Products) {
+  .controller('ProductsController', function ($ionicLoading, $timeout, $scope, $rootScope, $state, $ionicSideMenuDelegate, Products) {
 
     console.log("ProductsController loaded!");
 
@@ -8,19 +8,22 @@ angular.module('cocoowa')
     var menuToggle = false;
 
     $scope.loadProducts = function (category_id) {
-
+      $ionicLoading.show();
       $rootScope.productsArray = [];
 
       Products.getAll()
         .success(function (res) {
 
-          $rootScope.productsArray = res.data;
-
-          $ionicSideMenuDelegate.toggleLeft(false);
-          $state.go('app.products');
+          $timeout(function () {
+            $ionicLoading.hide();
+            $rootScope.productsArray = res.data;
+            console.log($rootScope.swiper);
+          });
 
         })
         .error(function (err) {
+          $ionicLoading.hide();
+          Toast.show("Η λήψη των προϊόντων απέτυχε!", "top");
           console.log("There was an error of getting products: ", err);
         });
 
@@ -32,31 +35,18 @@ angular.module('cocoowa')
       $ionicSideMenuDelegate.toggleLeft(!menuToggle);
     };
 
-    /*TEMPORARY CALL=========================================================*/
-
-
-    /*SWIPER*/
-    $scope.$on('$ionicView.afterEnter', function () {
-      console.log("Loading Swiper");
-      $rootScope.swiper = new Swiper(angular.element(document.querySelector("#productsSwiper")), {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        preloadImages: false,
-        autoHeight: false,
-        lazyLoading: true,
-        paginationClickable: true,
-        pagination: angular.element(document.querySelector("#productsPagination")),
-        prevButton: angular.element(document.querySelector("#productsBtnPrev")),
-        nextButton: angular.element(document.querySelector("#productsBtnNext")),
-        effect: 'slide'
-      });
-
+    $rootScope.swiper = new Swiper(angular.element(document.querySelector("#productsSwiper")), {
+      direction: 'horizontal',
+      loop: true,
+      preloadImages: false,
+      autoHeight: false,
+      lazyLoadingInPrevNext: true,
+      lazyLoading: true,
+      paginationClickable: true,
+      pagination: angular.element(document.querySelector("#productsPagination")),
+      prevButton: angular.element(document.querySelector("#productsBtnPrev")),
+      nextButton: angular.element(document.querySelector("#productsBtnNext")),
+      swipeHandler: angular.element(document.querySelector("#swipeHandler")),
+      effect: 'slide'
     });
-
-    $scope.$on('$ionicView.beforeLeave', function () {
-      console.log("Destory");
-      $rootScope.swiper.destroy();
-    });
-
   });

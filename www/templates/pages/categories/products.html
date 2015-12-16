@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ion-view title="{{currentLanguage.pages.products.pageTitle}}">
+<ion-view title="{{currentLanguage.pages.products.pageTitle}}" nav-transition="none">
   <ion-nav-bar class="bar-stable bar-positive">
 
     <ion-nav-buttons side="left">
@@ -16,7 +16,7 @@
 
     <div id="productsSwiper" class="swiper-container" style="position: absolute; height: 100%;">
       <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper" id="swipeHandler">
         <!-- Slides -->
         <div class="swiper-slide" ng-repeat="product in productsArray track by product.id">
           <div class="card" style="height: 90%;">

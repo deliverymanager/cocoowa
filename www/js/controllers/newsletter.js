@@ -1,4 +1,4 @@
-angular.module('cocoowa').controller('NewsletterController', function (Newsletter, $scope, Toast) {
+angular.module('cocoowa').controller('NewsletterController', function (Newsletter, $scope, Toast, $ionicLoading) {
 
   console.log("NewsletterController loaded!");
 
@@ -12,18 +12,19 @@ angular.module('cocoowa').controller('NewsletterController', function (Newslette
 
     console.log("email: ", $scope.data.email);
 
-    if ($scope.data.email === '') {
-      Toast.show("Παρακαλώ εισάγετε το email σας", "top");
-    }else if(!$scope.data.email){
+    if (!$scope.data.email) {
       Toast.show("Παρακαλώ εισάγετε ένα έγκυρο email", "top");
     } else {
       //Registering for subscription
+      $ionicLoading.show();
       Newsletter.subscribe($scope.data.email)
         .success(function (res) {
           if (res.success) {
             console.log(res.message);
+            $ionicLoading.hide();
             Toast.show("Επιτυχής εγγραφή στο newsletter!", "top");
           } else {
+            $ionicLoading.hide();
             Toast.show("Ανεπιτυχής εγγραφή στο newsletter!", "top");
             console.log(res.message);
           }
