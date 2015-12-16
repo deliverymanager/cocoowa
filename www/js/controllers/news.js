@@ -1,7 +1,7 @@
-angular.module("cocoowa").controller("NewsController", function (News, $rootScope, $scope, $ionicLoading) {
+angular.module("cocoowa").controller("NewsController", function (News, $rootScope, $scope, $ionicLoading, $ionicSideMenuDelegate) {
 
   console.log('NewsController loaded!');
-
+  $ionicSideMenuDelegate.canDragContent(true);
   //Initializing newsArray
   $scope.newsArray = [];
   $ionicLoading.show();

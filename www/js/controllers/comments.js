@@ -1,7 +1,7 @@
-angular.module('cocoowa').controller('CommentsController', function ($scope, Comments, Toast, $ionicLoading) {
+angular.module('cocoowa').controller('CommentsController', function ($scope, Comments, Toast, $ionicLoading, $ionicSideMenuDelegate) {
 
   console.log("CommentsController loaded!");
-
+  $ionicSideMenuDelegate.canDragContent(true);
   //Initializing the comments  parameters object
   $scope.commentsObject = {
     "name": "",
@@ -19,7 +19,7 @@ angular.module('cocoowa').controller('CommentsController', function ($scope, Com
       Toast.show("Παρακαλώ εισάγετε ένα έγκυρο email", 'top');
     } else if (!$scope.commentsObject.comments) {
       Toast.show("Παρακαλώ γράψτε την γνώμη σας στα σχόλια", 'top');
-    }else if(!$scope.commentsObject.email){
+    } else if (!$scope.commentsObject.email) {
       Toast.show("Παρακαλώ εισάγετε ένα εγκυρο email", 'top');
     } else {
       //POST request

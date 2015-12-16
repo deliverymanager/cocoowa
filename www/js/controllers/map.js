@@ -1,8 +1,8 @@
 angular.module('cocoowa')
-  .controller('MapController', function ($scope, $compile) {
+  .controller('MapController', function ($scope, $compile, $ionicSideMenuDelegate) {
 
     console.log("MapController loaded!");
-
+    $ionicSideMenuDelegate.canDragContent(false);
     function initialize() {
       var myLatlng = new google.maps.LatLng(40.6393297, 22.9442872);
 

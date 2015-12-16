@@ -2,6 +2,7 @@ angular.module('cocoowa')
   .controller('ProductsController', function ($ionicLoading, $timeout, $scope, $rootScope, $state, $ionicSideMenuDelegate, Products) {
 
     console.log("ProductsController loaded!");
+    $ionicSideMenuDelegate.canDragContent(false);
 
     /*TEMPORARY CALL=========================================================*/
     //Navigate to category products

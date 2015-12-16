@@ -1,7 +1,7 @@
-angular.module("cocoowa").controller("OffersController", function ($scope, Offers, $rootScope) {
+angular.module("cocoowa").controller("OffersController", function ($scope, Offers, $rootScope, $ionicSideMenuDelegate) {
 
   console.log("OffersController loaded!");
-
+  $ionicSideMenuDelegate.canDragContent(true);
   $scope.offersArray = [];
 
   Offers.getLatest()

@@ -1,7 +1,7 @@
-angular.module('cocoowa').controller('NewsletterController', function (Newsletter, $scope, Toast, $ionicLoading) {
+angular.module('cocoowa').controller('NewsletterController', function (Newsletter, $scope, Toast, $ionicLoading, $ionicSideMenuDelegate) {
 
   console.log("NewsletterController loaded!");
-
+  $ionicSideMenuDelegate.canDragContent(true);
   //Initializing object
   $scope.data = {
     email: ""
