@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<ion-view>
-  <ion-nav-bar class="bar-stable">
+<ion-view title="{{currentLanguage.pages.news.pageTitle}}">
+  <ion-nav-bar class="bar-stable bar-positive">
     <ion-nav-buttons side="left">
       <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
       </button>
@@ -26,7 +26,7 @@
         <!--Image-->
         <img ng-if="article.imageUrl !== ''" ng-src="{{article.imageUrl}}">
         <!--Text-->
-        <p>
+        <p ng-bind-html="article.text">
           {{article.text}}
         </p>
 

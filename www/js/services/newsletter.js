@@ -9,22 +9,7 @@ angular.module('cocoowa')
 
           method: 'POST',
           timeout: 10000,
-          url: '',
-          data: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json; charset=utf-8'
-          }
-        });
-      },
-
-      checkSubscription: function (data) {
-        console.log("Parameters for checking subscription POST", data);
-
-        return $http({
-
-          method: 'POST',
-          timeout: 10000,
-          url: '',
+          url: 'https://0ikanmdrx1.execute-api.eu-west-1.amazonaws.com/production/postsubscriptiontonewsletter',
           data: JSON.stringify(data),
           headers: {
             'Content-Type': 'application/json; charset=utf-8'

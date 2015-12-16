@@ -1,19 +1,9 @@
 {
   "newsArray":[
     {
-      "title":"aaaaaa",
-      "imageUrl":"",
-      "text":"aaaaaaa"
-    },
-    {
-      "title":"bbbbbb",
-      "imageUrl":"",
-      "text":"aabbbbaaaaa"
-    },
-    {
-      "title":"cccccc",
-      "imageUrl":"",
-      "text":"aaaacccccaaa"
+      "title":"One sweet Day Σοκολατερί",
+      "imageUrl":"https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/one_sweet_day/one-sweet-day.jpg",
+      "text":"Το One Sweet Day είναι μια Σοκολατερί, που φύτρωσε μέσα από τις φωτογραφικές εκδόσεις One Day. Έδεσε τη σοκολάτα με τον καφέ, το βιβλίο και τα παλιά νοσταλγικά έπιπλα.<br>Διεύθυνση: Ολύμπου 57 - Θεσσαλονίκη"
     }
   ]
 }

@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<ion-view>
+<ion-view title="{{currentLanguage.pages.products.pageTitle}}">
   <ion-nav-bar class="bar-stable bar-positive">
-    <ion-nav-back-button class="button-clear">
+
+    <ion-nav-buttons side="left">
+      <button class="button button-icon button-clear ion-navicon" ng-click="toggleMenuLeft()">
+      </button>
+    </ion-nav-buttons>
+
+    <!--<ion-nav-back-button class="button-clear">
       <i class="ion-chevron-left"></i>
-    </ion-nav-back-button>
+    </ion-nav-back-button>-->
+
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
 
-    <div class="card" ng-repeat="product in productsArray track by product.id">
-      <div class="item item-divider">
-        {{product.name}}
-        {{product.price}}
+    <div id="productsSwiper" class="swiper-container" style="position: absolute">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" ng-repeat="product in productsArray track by product.id">
+          <div class="card">
+            <div class="item item-divider">
+              {{product.name}}
+              <span style="float: right;">{{product.price_formated}}</span>
+            </div>
+            <div  align="center">
+              <img ng-src="{{product.image}}" style="height: 100%;">
+            </div>
+            <div class="item item-text-wrap">
+              {{product.description}}
+              <p style="margin-top: 3%;">{{product.tag}}</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <div>
-        <img ng-src="{{product.image}}">
-      </div>
-      <div class="item item-text-wrap">
-        {{product.description}}
-      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
     </div>
 
   </ion-content>

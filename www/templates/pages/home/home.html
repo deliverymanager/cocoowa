@@ -44,7 +44,7 @@
   <div ng-if="currentLanguage" class="card semi-transparent home-card animated fadeInUp">
     <!--<button class="button button-positive button-block icon-left ion-person">{{currentLanguage.pages.home.signButton}}
     </button>-->
-    <button class="button button-positive button-block icon-left ion-ios-pricetags">
+    <button class="button button-positive button-block icon-left ion-ios-pricetags" ng-click="navigateTo('app.products')">
       {{currentLanguage.pages.home.catalogButton}}
     </button>
   </div>
