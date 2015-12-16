@@ -7,7 +7,21 @@
       "home": {
         "pageTitle": "Home",
         "signButton": "Sign up/Sign in",
-        "catalogButton": "Products Catalog"
+        "catalogButton": "Products Catalog",
+        "imagesArray": [
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider1.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider2.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider3.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider4.png"
+          }
+        ]
       },
       "presentation": {
         "pageTitle": "Presentation",
@@ -41,22 +55,36 @@
         "email": "Email",
         "buttonMessage": "Send"
       },
-      "news":{
+      "news": {
         "pageTitle": "News"
       },
-      "offers":{
+      "offers": {
         "pageTitle": "Offers"
       },
-      "photos":{
-        "pageTitle": "Gallery"
+      "photos": {
+        "pageTitle": "Gallery",
+        "imagesArray": [
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery1.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery2.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery3.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery4.png"
+          }
+        ]
       },
-      "findUs":{
+      "findUs": {
         "pageTitle": "Find us"
       },
-      "categories":{
+      "categories": {
         "pageTitle": "Products"
       },
-      "products":{
+      "products": {
         "pageTitle": "Products"
       }
     }
@@ -69,7 +97,21 @@
       "home": {
         "pageTitle": "Αρχική",
         "signButton": "Εγγραφή/Σύνδεση",
-        "catalogButton": "Κατάλογος προϊόντων"
+        "catalogButton": "Κατάλογος προϊόντων",
+        "imagesArray": [
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider1.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider2.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider3.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/home/slider4.png"
+          }
+        ]
       },
       "presentation": {
         "pageTitle": "Παρουσίαση εταιρίας",
@@ -103,22 +145,36 @@
         "email": "Email",
         "buttonMessage": "Αποστολή"
       },
-      "news":{
+      "news": {
         "pageTitle": "Νέα"
       },
-      "offers":{
+      "offers": {
         "pageTitle": "Προσφορές"
       },
-      "photos":{
-        "pageTitle": "Φωτογραφίες"
+      "photos": {
+        "pageTitle": "Φωτογραφίες",
+        "imagesArray": [
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery1.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery2.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery3.png"
+          },
+          {
+            "image": "https://s3-eu-west-1.amazonaws.com/www.cocoowa.com/images/gallery/gallery4.png"
+          }
+        ]
       },
-      "findUs":{
+      "findUs": {
         "pageTitle": "Χάρτης"
       },
-      "categories":{
+      "categories": {
         "pageTitle": "Προϊόντα"
       },
-      "products":{
+      "products": {
         "pageTitle": "Προϊόντα"
       }
     }

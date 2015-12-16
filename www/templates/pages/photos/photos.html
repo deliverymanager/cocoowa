@@ -6,26 +6,13 @@
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>
-  <!--<ion-content has-bouncing="false" class="has-header">-->
-
   <div id="photosSwiper" class="swiper-container" style="position: absolute">
-    <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide" id="gallery-1"></div>
-      <div class="swiper-slide" id="gallery-2"></div>
-      <div class="swiper-slide" id="gallery-3"></div>
+      <div data-background="{{photoImg.image}}" class="swiper-slide swiper-lazy"
+           style="-webkit-background-size: cover; background-position: center center; background-repeat: no-repeat;"
+           ng-repeat="photoImg in currentLanguage.pages.photos.imagesArray track by $index">
+        <div class="swiper-lazy-preloader"></div>
+      </div>
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If we need navigation buttons -->
-    <!--<div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>-->
-
-    <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar"></div>
   </div>
-
-  <!--</ion-content>-->
 </ion-view>

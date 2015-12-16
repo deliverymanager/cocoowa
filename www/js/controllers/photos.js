@@ -7,10 +7,11 @@ angular.module('cocoowa')
     $ionicSideMenuDelegate.canDragContent(false);
 
     $scope.$on('$ionicView.afterEnter', function () {
-      console.log("Loading Swiper");
       $rootScope.swiper = new Swiper(angular.element(document.querySelector("#photosSwiper")), {
-        // Optional parameters
         direction: 'horizontal',
+        preloadImages: false,
+        lazyLoadingInPrevNext: true,
+        lazyLoading: true,
         loop: true,
         effect: 'fade',
         autoplay: 4000

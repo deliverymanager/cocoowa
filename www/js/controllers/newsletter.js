@@ -13,7 +13,7 @@ angular.module('cocoowa').controller('NewsletterController', function (Newslette
     console.log("email: ", $scope.data.email);
 
     if (!$scope.data.email) {
-      Toast.show("Παρακαλώ εισάγετε ένα έγκυρο email", "top");
+      Toast.show("Παρακαλώ εισάγετε ένα έγκυρο email", "center");
     } else {
       //Registering for subscription
       $ionicLoading.show();
@@ -22,15 +22,15 @@ angular.module('cocoowa').controller('NewsletterController', function (Newslette
           if (res.success) {
             console.log(res.message);
             $ionicLoading.hide();
-            Toast.show("Επιτυχής εγγραφή στο newsletter!", "top");
+            Toast.show("Επιτυχής εγγραφή στο newsletter!", "center");
           } else {
             $ionicLoading.hide();
-            Toast.show("Ανεπιτυχής εγγραφή στο newsletter!", "top");
+            Toast.show("Ανεπιτυχής εγγραφή στο newsletter!", "center");
             console.log(res.message);
           }
         })
         .error(function (err) {
-          Toast.show("Παρουσιάστηκε πρόβλημα κατά την εγγραφή σας στο newsletter. Παρακαλώ προσπαθήστε ξανά αργότερα", "top");
+          Toast.show("Παρουσιάστηκε πρόβλημα κατά την εγγραφή σας στο newsletter. Παρακαλώ προσπαθήστε ξανά αργότερα", "center");
           console.log("There was an error: ", err);
         });
     }

@@ -24,7 +24,7 @@
       <!--Body-->
       <div class="item item-body" align="center">
         <!--Image-->
-        <img style="max-height: 50%;" ng-if="article.imageUrl !== ''" ng-src="{{article.imageUrl}}">
+        <img style="max-height: 50%; max-width: 100%;" ng-if="article.imageUrl !== ''" ng-src="{{article.imageUrl}}">
         <!--Text-->
         <p ng-bind-html="article.text" style="text-align: left;">
         </p>

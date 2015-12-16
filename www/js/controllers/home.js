@@ -1,28 +1,67 @@
 angular.module('cocoowa')
-  .controller('HomeController', function ($timeout, $rootScope, $scope, $state, $ionicSideMenuDelegate, $ionicHistory) {
+  .controller('HomeController', function ($ionicPopup, $ionicPlatform, Languages, $timeout, $rootScope, $scope, $state, $ionicSideMenuDelegate, $ionicHistory) {
 
     console.log('HomeController loaded!');
+    $ionicPlatform.ready(function () {
 
-    $scope.$on('$ionicView.afterEnter', function () {
-      console.log("Loading Swiper");
-      $rootScope.swiper = new Swiper(angular.element(document.querySelector("#homeSwiper")), {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        effect: 'fade',
-        autoplay: 4000
-      });
+      Languages.get()
+        .success(function (response) {
+
+          console.log("Success in getting languages.json!");
+
+          /*Array that contains all language objects*/
+          $scope.languages = response;
+
+          /*Setting the current language*/
+          $timeout(function () {
+            //In case I just come back to the home page and the user has selected a language, I should use his selection!
+            if(!$rootScope.currentLanguage){
+              $rootScope.currentLanguage = _.findWhere($scope.languages, {"language": "greek"});
+            }
+
+            $timeout(function () {
+              $rootScope.swiper = new Swiper(angular.element(document.querySelector("#homeSwiper")), {
+                direction: 'horizontal',
+                preloadImages: false,
+                lazyLoading: true,
+                loop: true,
+                effect: 'fade',
+                autoplay: 4000
+              });
+            }, 1000);
+          });
+        })
+        .error(function (err) {
+
+          console.log("Error on fetching the languages.json: " + err);
+
+        });
 
     });
 
-    //Navigation to products
-    $rootScope.navigateTo = function (state) {
-      $ionicSideMenuDelegate.toggleLeft(false);
-      $ionicHistory.nextViewOptions({
-        disableAnimate: true,
-        disableBack: true
+
+    /*Function for changing the language*/
+    $scope.changeLanguage = function () {
+
+      $scope.popupVariablesObject = {
+        selectedLanguage: $rootScope.currentLanguage.language
+      };
+
+      $ionicPopup.show({
+        templateUrl: 'templates/popups/languagesPopup.html',
+        title: "Select language",
+        scope: $scope,
+        buttons: [
+          {
+            text: '<b>OK</b>',
+            type: 'button-positive',
+            onTap: function (e) {
+              $rootScope.currentLanguage = _.findWhere($scope.languages, {"language": $scope.popupVariablesObject.selectedLanguage});
+              console.log("Current Language: ", $rootScope.currentLanguage.language);
+            }
+          }
+        ]
       });
-      $state.go(state);
-    }
+    };
 
   });

@@ -4,7 +4,6 @@ angular.module('cocoowa')
     console.log("ProductsController loaded!");
     $ionicSideMenuDelegate.canDragContent(false);
 
-    /*TEMPORARY CALL=========================================================*/
     //Navigate to category products
     var menuToggle = false;
 
@@ -34,7 +33,6 @@ angular.module('cocoowa')
                 pagination: angular.element(document.querySelector("#productsPagination")),
                 prevButton: angular.element(document.querySelector("#productsBtnPrev")),
                 nextButton: angular.element(document.querySelector("#productsBtnNext")),
-                swipeHandler: angular.element(document.querySelector("#swipeHandler")),
                 effect: 'slide'
               });
             }, 1000);
