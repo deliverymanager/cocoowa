@@ -42,12 +42,13 @@ angular.module('cocoowa')
         // Optional parameters
         direction: 'horizontal',
         loop: true,
-        preloadImages: true,
+        preloadImages: false,
+        autoHeight: false,
+        lazyLoading: true,
         paginationClickable: true,
         pagination: angular.element(document.querySelector("#productsPagination")),
         prevButton: angular.element(document.querySelector("#productsBtnPrev")),
         nextButton: angular.element(document.querySelector("#productsBtnNext")),
-        scrollbar: angular.element(document.querySelector("#productsScrollbar")),
         effect: 'slide'
       });
 

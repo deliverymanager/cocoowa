@@ -12,20 +12,22 @@
     </ion-nav-back-button>-->
 
   </ion-nav-bar>
-  <ion-content has-bouncing="false" class="has-header">
+  <ion-content has-bouncing="false" class="has-header" scroll="false">
 
-    <div id="productsSwiper" class="swiper-container">
+    <div id="productsSwiper" class="swiper-container" style="position: absolute; height: 100%;">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide" ng-repeat="product in productsArray track by product.id">
-          <div class="card">
+          <div class="card" style="height: 90%;">
             <div class="item item-divider">
               {{product.name}}
               <span style="float: right;">{{product.price_formated}}</span>
             </div>
-            <div align="center">
-              <img ng-src="{{product.image}}">
+            <div align="center" style="height: 70%;">
+              <img data-src="{{product.image}}" class="swiper-lazy">
+
+              <div class="swiper-lazy-preloader"></div>
             </div>
             <div class="item item-text-wrap">
               {{product.description}}
@@ -36,13 +38,9 @@
       </div>
       <!-- If we need pagination -->
       <div id="productsPagination" class="swiper-pagination"></div>
-
       <!-- If we need navigation buttons -->
       <div id="productsBtnPrev" class="swiper-button-prev"></div>
       <div id="productsBtnNext" class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div id="productsScrollbar" class="swiper-scrollbar"></div>
     </div>
 
   </ion-content>
