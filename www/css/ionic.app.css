@@ -9802,11 +9802,11 @@ a.button {
 .selected-flag {
   background-color: dodgerblue; }
 
-/*SWIPER*/
+/*SWIPER
 .swiper-container {
   width: 100%;
-  height: 100%; }
-
+  height: 100%;
+}*/
 /*BACKGROUND*/
 .background-image {
   background: url("../img/backgrounds/background1.png") no-repeat center center;
