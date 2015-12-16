@@ -1,5 +1,5 @@
 angular.module('cocoowa')
-  .controller('ProductsController', function($scope, $rootScope, $state, $ionicSideMenuDelegate, Products){
+  .controller('ProductsController', function ($scope, $rootScope, $state, $ionicSideMenuDelegate, Products) {
 
     console.log("ProductsController loaded!");
 
@@ -7,12 +7,12 @@ angular.module('cocoowa')
     //Navigate to category products
     var menuToggle = false;
 
-    $scope.loadProducts = function(category_id){
+    $scope.loadProducts = function (category_id) {
 
       $rootScope.productsArray = [];
 
       Products.getAll()
-        .success(function(res){
+        .success(function (res) {
 
           $rootScope.productsArray = res.data;
 
@@ -20,15 +20,15 @@ angular.module('cocoowa')
           $state.go('app.products');
 
         })
-        .error(function(err){
-          console.log("There was an error of getting products: ",err);
+        .error(function (err) {
+          console.log("There was an error of getting products: ", err);
         });
 
     };
 
     $scope.loadProducts("1");
 
-    $scope.toggleMenuLeft = function(){
+    $scope.toggleMenuLeft = function () {
       $ionicSideMenuDelegate.toggleLeft(!menuToggle);
     };
 
@@ -41,8 +41,13 @@ angular.module('cocoowa')
       $rootScope.swiper = new Swiper(angular.element(document.querySelector("#productsSwiper")), {
         // Optional parameters
         direction: 'horizontal',
-        lazyLoading:true,
         loop: true,
+        preloadImages: true,
+        paginationClickable: true,
+        pagination: angular.element(document.querySelector("#productsPagination")),
+        prevButton: angular.element(document.querySelector("#productsBtnPrev")),
+        nextButton: angular.element(document.querySelector("#productsBtnNext")),
+        scrollbar: angular.element(document.querySelector("#productsScrollbar")),
         effect: 'slide'
       });
 

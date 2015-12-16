@@ -14,7 +14,7 @@
   </ion-nav-bar>
   <ion-content has-bouncing="false" class="has-header">
 
-    <div id="productsSwiper" class="swiper-container" style="position: absolute">
+    <div id="productsSwiper" class="swiper-container">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
@@ -24,8 +24,8 @@
               {{product.name}}
               <span style="float: right;">{{product.price_formated}}</span>
             </div>
-            <div  align="center">
-              <img ng-src="{{product.image}}" style="height: 100%;">
+            <div align="center">
+              <img ng-src="{{product.image}}">
             </div>
             <div class="item item-text-wrap">
               {{product.description}}
@@ -33,17 +33,16 @@
             </div>
           </div>
         </div>
-
       </div>
       <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+      <div id="productsPagination" class="swiper-pagination"></div>
 
       <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div id="productsBtnPrev" class="swiper-button-prev"></div>
+      <div id="productsBtnNext" class="swiper-button-next"></div>
 
       <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+      <div id="productsScrollbar" class="swiper-scrollbar"></div>
     </div>
 
   </ion-content>
