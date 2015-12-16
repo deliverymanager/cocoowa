@@ -9,7 +9,7 @@ angular.module('cocoowa')
 
           method:'POST',
           timeout: 10000,
-          url: 'https://0ikanmdrx1.execute-api.eu-west-1.amazonaws.com/production/sendcomment',
+          url: 'https://api.deliverymanager.gr/cocoowa/sendcomment',
           data: JSON.stringify(data),
           headers: {
             'Content-Type': 'application/json; charset=utf-8'
