@@ -16,11 +16,29 @@ angular.module('cocoowa')
         .success(function (res) {
 
           $timeout(function () {
+            console.log("Loading products");
             $ionicLoading.hide();
             $rootScope.productsArray = res.data;
-            console.log($rootScope.swiper);
-          });
+            console.log($rootScope.productsArray);
+            $timeout(function () {
 
+              console.log("Loading swiper directive");
+              $rootScope.swiper = new Swiper(angular.element(document.querySelector("#productsSwiper")), {
+                direction: 'horizontal',
+                loop: true,
+                preloadImages: false,
+                autoHeight: false,
+                lazyLoadingInPrevNext: true,
+                lazyLoading: true,
+                paginationClickable: true,
+                pagination: angular.element(document.querySelector("#productsPagination")),
+                prevButton: angular.element(document.querySelector("#productsBtnPrev")),
+                nextButton: angular.element(document.querySelector("#productsBtnNext")),
+                swipeHandler: angular.element(document.querySelector("#swipeHandler")),
+                effect: 'slide'
+              });
+            }, 1000);
+          });
         })
         .error(function (err) {
           $ionicLoading.hide();
@@ -36,18 +54,4 @@ angular.module('cocoowa')
       $ionicSideMenuDelegate.toggleLeft(!menuToggle);
     };
 
-    $rootScope.swiper = new Swiper(angular.element(document.querySelector("#productsSwiper")), {
-      direction: 'horizontal',
-      loop: true,
-      preloadImages: false,
-      autoHeight: false,
-      lazyLoadingInPrevNext: true,
-      lazyLoading: true,
-      paginationClickable: true,
-      pagination: angular.element(document.querySelector("#productsPagination")),
-      prevButton: angular.element(document.querySelector("#productsBtnPrev")),
-      nextButton: angular.element(document.querySelector("#productsBtnNext")),
-      swipeHandler: angular.element(document.querySelector("#swipeHandler")),
-      effect: 'slide'
-    });
   });
